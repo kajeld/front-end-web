@@ -1,4 +1,5 @@
 # Field Notes 
+[Week 02 Field Notes](https://github.com/kajeld/front-end-web/wiki/Week-02)
 
 # Experiment
 
