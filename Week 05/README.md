@@ -2,7 +2,7 @@
 
 ## Field Notes
 
-(Field Notes!)[https://github.com/kajeld/front-end-web/wiki/Week-05]
+[Field Notes!](https://github.com/kajeld/front-end-web/wiki/Week-05)
 
 ## Midterm Progress
 
