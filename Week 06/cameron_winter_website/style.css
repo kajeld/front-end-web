@@ -1,0 +1,474 @@
+
+/* Constant Page Settings */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #FFFCF9;
+}
+ /* Homepage Fonts and Colors*/
+
+@font-face {
+    font-family: "Old England Gothic";
+    src: url("assets/Old_England_Gothic.otf")
+         format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+    --cream: #FFFCF9;
+    --black: #000000;
+    --blue: #787EA2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Opening Gate Animation */
+
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: white;
+    z-index: 100;
+
+    animation: hideIntro 0s 1.8s forwards;
+}
+
+/* Gate GIF*/
+
+.intro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    animation: hideGate 0s 1.5s forwards;
+}
+
+/* to hide the gate after 3 seconds */
+
+@keyframes hideGate {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* to hide the white intro screen after 0.3 seconds */
+
+@keyframes hideIntro {
+    to {
+        visibility: hidden;
+    }
+}
+
+
+/* homepage */
+
+.homepage {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    background-color: #FFFCF9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+
+/* homepage background */
+
+.homepage {
+    position: relative;
+    min-height: 100vh;
+    background-color: #FFFCF9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* header */
+
+.home-header {
+    position: relative;
+    width: 100%;
+    height: 155px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    z-index: 5;
+}
+
+
+/* cameron winter blackletter title*/
+
+.home-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 20px 0 0;
+
+    font-family: "Old England Gothic", serif;
+    font-size: 65px;
+    font-weight: normal;
+    color: black;
+}
+
+.title-cameron {
+    display: inline-block;
+    transform: rotate(-10deg) translateY(8px);
+}
+
+.title-winter {
+    display: inline-block;
+    transform: rotate(10deg) translateY(8px);
+}
+
+
+/* hamburger icon*/
+
+.hamburger {
+    position: absolute;
+    top: 35px;
+    right: 5%;
+
+    width: 36px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: black;
+    border-radius: 2px;
+}
+
+
+/* window sections */
+
+.window-section {
+    position: relative;
+
+    width: 100%;
+   height: 75vh;
+
+    margin-top: -10px;
+}
+
+
+/* background window panels */
+
+.window-backgrounds {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    padding: 0 10% 5%;
+}
+
+.window-panel {
+    width: 29%;
+    height: 67%;
+
+
+    border-radius: 48% 48% 7% 7% / 22% 22% 5% 5%;
+}
+
+
+/* window png */
+
+
+.window-drawing {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 80%;
+    height: 120%;
+
+    transform: translateX(-50%);
+
+    object-fit: fill;
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+
+/* illustration + clickable links*/
+
+.window-links {
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    z-index: 3;
+}
+
+
+/* clickable illustration links */
+
+.owl-link,
+.portrait-link,
+.piano-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* three main illustration */
+
+/* shared properties of all three */
+
+.window-art {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+    max-width: none;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* owl */
+
+.owl-art {
+    top: 90%;
+    left: 72%;
+
+    width: 50%;
+    height: 35%;
+}
+
+
+/* cw portrait */
+
+.portrait-art {
+    top: 85%;
+    left: 50%;
+
+    width: 50%;
+    height: 35%;
+}
+
+
+/* piano hands */
+
+.piano-art {
+    top: 86%;
+    left: 25%;
+
+    width: 70%;
+    height: 40%;
+}
+
+
+
+
+/* hover text for illustrations*/
+
+/* SHARED STYLING */
+
+.hover-title {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-weight: 600;
+
+    white-space: nowrap;
+    color: black;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    pointer-events: none;
+}
+
+
+/* owl hover text position */
+
+.owl-link .hover-title {
+    top: 85%;
+    left: 75%;
+    font-size: 22px;
+}
+
+
+/* cw portrait hover text position*/
+
+.portrait-link .hover-title {
+    top: 85%;
+    left: 50%;
+    font-size: 22px;
+}
+
+
+/* piano hands hover text position */
+
+.piano-link .hover-title {
+    top: 85%;
+    left: 27%;
+    font-size: 22px;
+}
+
+
+/* lower opacity when hover is activiated*/
+
+.window-art:hover {
+    opacity: 0.65;
+}
+
+/* show title when hovered on */
+
+.owl-link:has(.owl-art:hover) .hover-title,
+.portrait-link:has(.portrait-art:hover) .hover-title,
+.piano-link:has(.piano-art:hover) .hover-title {
+    opacity: 1;
+}
+
+
+
+/* email sign up words */
+
+.scroll-text {
+    margin-top: auto;
+    margin-bottom: 30px;
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    color: black;
+    text-decoration: none;
+}
+
+.scroll-text:hover {
+    opacity: 0.6;
+}
+
+
+/* email sign up section */
+
+.signup-section {
+    width: 100%;
+    min-height: 150px;
+
+    padding: 20px 20px;
+
+    background-color: #787EA2;
+    color: #FFFFFF;
+
+    text-align: center;
+}
+
+.signup-section h2 {
+    margin: 0 0 15px;
+
+    font-family: "Old England Gothic", serif;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.signup-section p {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+
+/* email form -- not working yet*/
+
+.email-form {
+    width: min(450px, 90%);
+    margin: 0 auto 60px;
+
+    text-align: left;
+}
+
+.email-form label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 12px;
+}
+
+.email-box {
+    display: flex;
+    border-bottom: 1px solid #272421;
+}
+
+.email-box input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 12px 0;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 14px;
+}
+
+.email-box button {
+    padding: 10px 15px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 22px;
+    cursor: pointer;
+}
