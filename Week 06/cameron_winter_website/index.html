@@ -6,16 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cameron Winter</title>
     <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
+
+
+<!-- UNIVERSAL NAVIGATION -->
+
+<!-- Hidden checkbox controlling menu -->
+<input type="checkbox"
+       id="menu-toggle"
+       class="menu-toggle"
+       aria-label="Toggle navigation menu">
+
+
+<!-- Hamburger icon -->
+<label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+
+
+<!-- Dark overlay (click to close) -->
+<label for="menu-toggle"
+       class="menu-overlay"
+       aria-label="Close navigation menu">
+</label>
+
+
+<!-- Slide-out navigation -->
+<nav class="side-menu" aria-label="Main navigation">
+
+    <!-- X to close menu -->
+    <label for="menu-toggle"
+           class="menu-close"
+           aria-label="Close navigation menu">
+        &times;
+    </label>
+
+
+    <!-- Menu links -->
+    <div class="menu-links">
+
+        <a href="dreams.html">dreams</a>
+
+        <a href="https://cameronwinter.lnk.to/LiveatCarnegieHall"
+           target="_blank"
+           rel="noopener noreferrer">
+            listen
+        </a>
+
+        <a href="in_the_world.html">in the world</a>
+
+        <a href="theories.html">theories</a>
+
+        <a href="portraits.html">portraits</a>
+
+        <a href="index.html#signup">guestbook</a>
+
+        <a href="store.html">store</a>
+
+    </div>
+
+</nav>
+
 
   <!-- Opening Gate Animation -->
     <div class="intro">
         <img src="assets/Gate_Animation.gif" alt="Opening gate animation">
     </div>
-
-    <main class="homepage">
 
 <!-- homepage -->
 <main class="homepage">
@@ -29,66 +90,96 @@
             <span class="title-winter">Winter</span>
         </h1>
 
-        <!-- hamburger icon -->
-        <button class="hamburger" type="button"
-                aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
     </header>
 
+    <!-- DARK OVERLAY -->
+<div class="menu-overlay"></div>
 
-    <!-- window + illustration -->
-    <section class="window-section">
 
-        <!-- panels behind windows bc png is transparent -->
-        <div class="window-backgrounds">
-            <div class="window-panel"></div>
-            <div class="window-panel"></div>
-            <div class="window-panel"></div>
+<!-- SLIDE-OUT NAVIGATION -->
+<nav class="side-menu" id="side-menu" aria-label="Main navigation">
+
+    <button class="menu-close"
+            type="button"
+            aria-label="Close menu">
+        &times;
+    </button>
+
+    <div class="menu-links">
+
+        <a href="dreams.html">Dreams</a>
+
+        <a href="https://cameronwinter.lnk.to/LiveatCarnegieHall"
+           target="_blank"
+           rel="noopener noreferrer">Listen</a>
+
+        <a href="in_the_world.html">In the World</a>
+
+        <a href="theories.html">Theories</a>
+
+        <a href="portraits.html">Portraits</a>
+
+        <a href="index.html#signup">Guestbook</a>
+
+        <a href="store.html">Store</a>
+
+    </div>
+
+</nav>
+
+
+<!-- windows and illustrations -->
+<section class="window-section">
+
+    <div class="window-stage">
+
+        <!-- gothic window PNG -->
+        <img src="assets/WindowsUpdated.png"
+             class="window-drawing"
+             alt="Decorative gothic windows">
+
+        <!-- clickable illustrations -->
+        <div class="window-links">
+
+            <!-- left window: owl -->
+            <a href="dreams.html" class="window-link owl-link">
+                <img src="assets/owl.png"
+                     class="window-art"
+                     alt="Owl illustration">
+
+                <span class="hover-title">Dreams</span>
+            </a>
+
+            <!-- center window: portrait -->
+            <a href="https://cameronwinter.lnk.to/LiveatCarnegieHall"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="window-link portrait-link">
+
+                <img src="assets/portrait.png"
+                     class="window-art"
+                     alt="Cameron Winter portrait">
+
+                <span class="hover-title">Listen</span>
+            </a>
+
+            <!-- right window: piano -->
+            <a href="in_the_world.html"
+               class="window-link piano-link">
+
+                <img src="assets/piano.png"
+                     class="window-art"
+                     alt="Hands playing piano">
+
+                <span class="hover-title">In the World</span>
+            </a>
+
         </div>
 
-        <!-- window drawing png-->
-        <img src="assets/window.png"
-             class="window-drawing"
-             alt="Decorative gothic window">
+    </div>
 
-
-        
-<!-- clickable illustration -->
-<div class="window-links">
-
-    <!-- owl -->
-    <a href="dreams.html" class="owl-link">
-        <img src="assets/owl.png"
-             class="window-art owl-art"
-             alt="Owl illustration">
-        <span class="hover-title">Dreams</span>
-    </a>
-
-    <!-- cw portrait -->
-    <a href="https://cameronwinter.lnk.to/LiveatCarnegieHall"
-       target="_blank" class="portrait-link">
-        <img src="assets/portrait.png"
-             class="window-art portrait-art"
-             alt="Cameron Winter portrait">
-        <span class="hover-title">Listen</span>
-    </a>
-
-    <!-- piano hands -->
-    <a href="in-the-world.html" class="piano-link">
-        <img src="assets/piano.png"
-             class="window-art piano-art"
-             alt="Hands playing piano">
-        <span class="hover-title">In the World</span>
-    </a>
-
-</div>
-
-
-    </section>
+</section>
 
 
     <!-- scroll down for email -->
@@ -98,6 +189,13 @@
 
 </main>
 
+  <!-- black stripe below windows -->
+    <div 
+    class="black-stripe">
+    </div>
+
+    <!-- email sign up section -->
+    <footer id="signup" class="signup-section">
 
 <!-- email sign up section -->
 <footer id="signup" class="signup-section">
@@ -127,8 +225,6 @@
     </form>
 
 </footer>
-
-    </main>
 
 </body>
 </html>

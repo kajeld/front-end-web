@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dreams | Cameron Winter</title>
+
+    <link rel="stylesheet" href="dreams.css">
+    <link rel="stylesheet" href="menu.css">
+
+    <script src="dreams.js" defer></script>
+</head>
+
+<body>
+
+    <!-- UNIVERSAL NAVIGATION -->
+
+    <input type="checkbox"
+           id="menu-toggle"
+           class="menu-toggle"
+           aria-label="Toggle navigation menu">
+
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <label for="menu-toggle"
+           class="menu-overlay"
+           aria-label="Close navigation menu">
+    </label>
+
+    <nav class="side-menu" aria-label="Main navigation">
+
+        <label for="menu-toggle"
+               class="menu-close"
+               aria-label="Close navigation menu">
+            &times;
+        </label>
+
+        <div class="menu-links">
+            <a href="dreams.html">Dreams</a>
+
+            <a href="https://cameronwinter.lnk.to/LiveatCarnegieHall"
+               target="_blank"
+               rel="noopener noreferrer">Listen</a>
+
+            <a href="in-the-world.html">In the World</a>
+
+            <a href="theories.html">Theories</a>
+
+            <a href="portraits.html">Portraits</a>
+
+            <a href="index.html#signup">Guestbook</a>
+
+            <a href="store.html">Store</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <header class="dreams-header">
+
+        <a href="index.html" class="logo">
+            <span>Cameron</span>
+            <span>Winter</span>
+        </a>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="dreams-page">
+
+        <!-- OWL ILLUSTRATION -->
+
+        <div class="dreams-owl">
+            <img src="assets/owl.png"
+                 alt="Owl illustration">
+        </div>
+
+
+        <!-- VIDEO CAROUSEL -->
+
+        <section class="dreams-carousel"
+                 aria-label="Cameron Winter music videos">
+
+            <div class="carousel-layout">
+
+                <!-- PREVIOUS VIDEO -->
+                <button class="carousel-arrow previous"
+                        type="button"
+                        aria-label="Previous video">
+                    &#8592;
+                </button>
+
+
+               <!-- YOUTUBE VIDEO -->
+
+
+<div class="video-container">
+
+    <iframe
+        id="dreams-video"
+        src="https://www.youtube.com/embed/U4UFAejSQFA?si=jux9-E1seYevLEjH"
+        title="Cameron Winter music video"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+
+</div>
+
+
+
+                <!-- NEXT VIDEO -->
+                <button class="carousel-arrow next"
+                        type="button"
+                        aria-label="Next video">
+                    &#8594;
+                </button>
+
+            </div>
+
+
+            <!-- VIDEO CAPTION -->
+
+            <div class="video-caption" aria-live="polite">
+
+                <p id="video-title">
+                    Love Takes Miles (Official Video)
+                </p>
+
+                <p id="video-date">
+                    December 11, 2025
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</body>
+</html>

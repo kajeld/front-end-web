@@ -1,0 +1,257 @@
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+@font-face {
+    font-family: 'Old England Gothic';
+    src: url('assets/Old%20England%20Gothic.otf')
+         format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* PAGE SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background-color: #FFFCF9;
+    color: #272421;
+}
+
+/* Hamburger color for cream background */
+
+:root {
+    --menu-icon-color: black;
+}
+
+
+/* HEADER */
+
+.dreams-header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 150px;
+
+    z-index: 5;
+}
+
+
+/* CAMERON WINTER WORDMARK */
+
+.logo {
+    position: absolute;
+
+    top: 30px;
+    left: 4.5%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Old England Gothic', serif;
+    font-size: 90px;
+    font-weight: normal;
+    line-height: 1.1;
+
+    color: #272421;
+    text-decoration: none;
+}
+
+
+/* MAIN PAGE */
+
+.dreams-page {
+    width: 100%;
+
+    padding-top: 110px;
+    padding-bottom: 100px;
+}
+
+
+/* OWL ILLUSTRATION */
+
+.dreams-owl {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.dreams-owl img {
+    width: 145px;
+    height: 150px;
+
+    object-fit: contain;
+}
+
+
+/* VIDEO CAROUSEL */
+
+.dreams-carousel {
+    width: 65%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* VIDEO AND ARROWS LAYOUT */
+
+.carousel-layout {
+    display: grid;
+
+    grid-template-columns: 45px minmax(0, 1fr) 45px;
+
+    align-items: center;
+    column-gap: 18px;
+}
+
+
+/* VIDEO CONTAINER */
+
+.video-container {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    background-color: black;
+
+    overflow: hidden;
+}
+
+.video-container iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* CAROUSEL ARROWS */
+
+.carousel-arrow {
+    border: none;
+    background: transparent;
+
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+
+    color: #787EA2;
+
+    cursor: pointer;
+
+    transition: opacity 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    opacity: 0.5;
+}
+
+.previous {
+    text-align: center;
+}
+
+.next {
+    text-align: center;
+}
+
+
+/* VIDEO CAPTION */
+
+.video-caption {
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: #787EA2;
+}
+
+.video-caption p {
+    margin: 0;
+}
+
+
+/* BOTTOM DESCRIPTION */
+
+.dreams-description {
+    margin: 55px auto 0;
+
+    text-align: center;
+
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #787EA2;
+}
+
+
+/* SMALLER SCREENS */
+
+@media (max-width: 768px) {
+
+    .logo {
+        top: 25px;
+        left: 5%;
+
+        font-size: 32px;
+    }
+
+    .dreams-page {
+        padding-top: 150px;
+    }
+
+    .dreams-owl img {
+        width: 110px;
+        height: 115px;
+    }
+
+    .dreams-carousel {
+        width: 95%;
+    }
+
+    .carousel-layout {
+        grid-template-columns: 25px minmax(0, 1fr) 25px;
+        column-gap: 5px;
+    }
+
+    .carousel-arrow {
+        font-size: 25px;
+    }
+
+    .video-caption {
+        font-size: 12px;
+    }
+
+    .dreams-description {
+        font-size: 12px;
+        margin-top: 45px;
+    }
+}

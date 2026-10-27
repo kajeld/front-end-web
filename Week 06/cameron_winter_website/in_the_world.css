@@ -1,0 +1,262 @@
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+@font-face {
+    font-family: 'Old England Gothic';
+    src: url('assets/Old%20England%20Gothic.otf')
+         format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* PAGE SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #FFFCF9;
+    color: #272421;
+}
+
+
+/* HEADER */
+
+.world-header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 150px;
+
+    z-index: 5;
+}
+
+
+/* CAMERON WINTER WORDMARK */
+
+.logo {
+    position: absolute;
+
+    top: 30px;
+    left: 4.5%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Old England Gothic', serif;
+    font-size: 90px;
+    font-weight: normal;
+    line-height: 0.95;
+
+    color: #272421;
+    text-decoration: none;
+}
+
+:root {
+    --menu-icon-color: black;
+}
+
+/* MAIN PAGE */
+
+.world-page {
+    width: 100%;
+
+    padding-top: 110px;
+    padding-bottom: 100px;
+}
+
+
+/* PIANO HANDS ILLUSTRATION */
+
+.pianoHands {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.pianoHands img {
+    width: 200px;
+    height: 125px;
+
+    object-fit: contain;
+}
+
+
+/* CARNEGIE HALL SECTION */
+
+.film-section {
+    width: 55%;
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+
+/* EMBEDDED WEBSITE */
+
+.film-embed {
+    position: relative;
+
+    width: 100%;
+    height: 420px;
+
+    overflow: hidden;
+    background-color: black;
+}
+
+.film-embed iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* EXTERNAL LINK ARROW */
+
+.film-open-link {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    z-index: 5;
+
+    padding: 8px 12px;
+
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.film-open-link:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* CAPTION BELOW EMBED */
+
+.film-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+
+    margin-top: 20px;
+
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+
+    text-align: center;
+
+    color: #78713C;
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+.film-caption:hover {
+    opacity: 0.6;
+}
+
+
+/* TOUR SECTION */
+
+.tour-section {
+    width: 55%;
+    max-width: 950px;
+
+    margin: 90px auto 0;
+}
+
+.tour-section h2 {
+    margin: 0 0 12px;
+
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.tour-divider {
+    width: 100%;
+    height: 1px;
+
+    background-color: #C9C5C2;
+}
+
+.tour-section p {
+    margin-top: 20px;
+
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+
+
+/* SMALLER SCREENS */
+
+@media (max-width: 768px) {
+
+    .logo {
+        top: 25px;
+        left: 5%;
+
+        font-size: 32px;
+    }
+
+    .hamburger {
+        right: 5%;
+    }
+
+    .world-page {
+        padding-top: 150px;
+    }
+
+    .pianoHands img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .film-section,
+    .tour-section {
+        width: 90%;
+    }
+
+    .film-embed {
+        height: 350px;
+    }
+
+    .film-caption {
+        font-size: 12px;
+    }
+
+    .tour-section {
+        margin-top: 65px;
+    }
+}
+

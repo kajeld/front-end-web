@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>In the World | Cameron Winter</title>
+
+    <link rel="stylesheet" href="in_the_world.css">
+      <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+
+<!-- UNIVERSAL NAVIGATION -->
+
+<!-- Hidden checkbox controlling menu -->
+<input type="checkbox"
+       id="menu-toggle"
+       class="menu-toggle"
+       aria-label="Toggle navigation menu">
+
+
+<!-- Hamburger icon -->
+<label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+
+
+<!-- Dark overlay (click to close) -->
+<label for="menu-toggle"
+       class="menu-overlay"
+       aria-label="Close navigation menu">
+</label>
+
+
+<!-- Slide-out navigation -->
+<nav class="side-menu" aria-label="Main navigation">
+
+    <!-- X to close menu -->
+    <label for="menu-toggle"
+           class="menu-close"
+           aria-label="Close navigation menu">
+        &times;
+    </label>
+
+
+    <!-- Menu links -->
+    <div class="menu-links">
+
+        <a href="dreams.html">dreams</a>
+
+        <a href="https://cameronwinter.lnk.to/LiveatCarnegieHall"
+           target="_blank"
+           rel="noopener noreferrer">
+            listen
+        </a>
+
+        <a href="in_the_world.html">in the world</a>
+
+        <a href="theories.html">theories</a>
+
+        <a href="portraits.html">portraits</a>
+
+        <a href="index.html#signup">guestbook</a>
+
+        <a href="store.html">store</a>
+
+    </div>
+
+</nav>
+
+
+    <!-- HEADER -->
+    <header class="world-header">
+
+        <!-- Cameron Winter wordmark -->
+        <a href="index.html" class="logo">
+            <span>Cameron</span>
+            <span>Winter</span>
+        </a>
+
+    </header>
+
+
+    <!-- MAIN PAGE -->
+    <main class="world-page">
+
+        <!-- Piano hands illustration -->
+        <div class="pianoHands">
+            <img src="assets/piano.png"
+                 alt="Hands playing piano">
+        </div>
+
+
+        <!-- FILM WEBSITE SECTION -->
+        <section class="film-section">
+<!-- embedded website part -->
+           <div class="film-embed">
+
+    <iframe
+        src="https://cameronwinter.film/"
+        title="Cameron Winter at Carnegie Hall"
+        loading="lazy">
+    </iframe>
+
+    <a href="https://cameronwinter.film/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="film-open-link"
+       aria-label="Open full film website">
+        ↗
+    </a>
+
+</div>
+
+            <!-- Link to full external website -->
+            <a href="https://cameronwinter.film/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="film-caption">
+
+                <span>Cameron Winter at Carnegie Hall</span>
+
+                <span>35mm film tour · Begins November 20, 2026 </span>
+
+            </a>
+
+        </section>
+
+
+        <!-- TOUR SECTION -->
+        <section class="tour-section">
+
+            <h2>Tour</h2>
+
+            <div class="tour-divider"></div>
+
+            <p>No sightings scheduled as of yet.</p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+
+/* UNIVERSAL MENU */
+
+/* FONT */
+
+@font-face {
+    font-family: 'Old England Gothic';
+    src: url('assets/Old%20England%20Gothic.otf')
+         format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* HIDDEN CHECKBOX */
+
+.menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+
+/* HAMBURGER ICON */
+
+.hamburger {
+    position: fixed;
+
+    top: 38px;
+    right: 4%;
+
+    width: 40px;
+    height: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    z-index: 20;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--menu-icon-color, black);
+
+    transition: background-color 0.3s ease;
+}
+
+
+/* DARK PAGE OVERLAY */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease,
+                visibility 0.3s ease;
+
+    z-index: 10;
+
+    cursor: pointer;
+}
+
+
+/* SLIDE-OUT SIDEBAR */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 350px;
+    max-width: 85%;
+    height: 100vh;
+    height: 100dvh;
+
+    padding: 100px 45px 40px;
+
+    background-color: #000000;
+
+    transform: translateX(100%);
+    visibility: hidden;
+
+    transition: transform 0.4s ease,
+                visibility 0.4s ease;
+
+    z-index: 15;
+
+    overflow-y: auto;
+}
+
+
+/* NAVIGATION LINKS */
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+}
+
+.menu-links a {
+    font-family: 'Old England Gothic', serif;
+    font-size: 50px;
+    font-weight: normal;
+
+    color: white;
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.menu-links a:hover {
+    opacity: 0.55;
+}
+
+
+/* CLOSE BUTTON */
+
+.menu-close {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* OPEN THE MENU WHEN CHECKED */
+
+.menu-toggle:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-toggle:checked ~ .side-menu {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+
+/* HIDE HAMBURGER WHEN MENU IS OPEN */
+
+.menu-toggle:checked ~ .hamburger {
+    visibility: hidden;
+}
+
+
+/* KEYBOARD FOCUS */
+
+.menu-toggle:focus-visible ~ .hamburger {
+    outline: 2px solid currentColor;
+    outline-offset: 6px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        top: 30px;
+        right: 5%;
+    }
+
+    .side-menu {
+        width: 85%;
+        padding: 85px 30px 40px;
+    }
+
+    .menu-links {
+        gap: 25px;
+    }
+
+    .menu-links a {
+        font-size: 30px;
+    }
+}

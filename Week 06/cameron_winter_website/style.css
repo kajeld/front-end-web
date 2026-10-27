@@ -11,13 +11,23 @@ body {
 }
  /* Homepage Fonts and Colors*/
 
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
 @font-face {
-    font-family: "Old England Gothic";
-    src: url("assets/Old_England_Gothic.otf")
-         format("opentype");
+    font-family: 'Old England Gothic';
+    src: url('assets/Old\ England\ Gothic.otf')
+         format('TrueType');
+         font-weight: normal;
+         font-style: normal; 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+@font-face{
+    font-family:'Stamping Nico';
+    src: url('assets/Stamping\ Nico.ttf')
+    format('TrueType');
+    font-weight: normal
+}
+
 
 :root {
     --cream: #FFFCF9;
@@ -75,14 +85,13 @@ html {
 /* homepage */
 
 .homepage {
-    min-height: 100vh;
     position: relative;
-    width: 100%;
-    background-color: #FFFCF9;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 0;
+
+    background-color: #000000;
 
     overflow: hidden;
 }
@@ -93,7 +102,7 @@ html {
 
 .homepage {
     position: relative;
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: #FFFCF9;
 
     display: flex;
@@ -107,9 +116,13 @@ html {
 /* header */
 
 .home-header {
-    position: relative;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
     width: 100%;
-    height: 155px;
+    height: 180px;
 
     display: flex;
     justify-content: center;
@@ -119,7 +132,7 @@ html {
 }
 
 
-/* cameron winter blackletter title*/
+/* cameron winter title */
 
 .home-title {
     display: flex;
@@ -128,65 +141,46 @@ html {
 
     gap: 25px;
 
-    margin: 20px 0 0;
+    margin: 45px 0 0;
 
-    font-family: "Old England Gothic", serif;
-    font-size: 65px;
+    font-family: 'Old England Gothic', serif;
+    font-size: 155px;
     font-weight: normal;
-    color: black;
+
+    color: white;
+
+    position: relative;
+    z-index: 4;
 }
 
-.title-cameron {
+/* .title-cameron {
     display: inline-block;
-    transform: rotate(-10deg) translateY(8px);
-}
+    transform: rotate(-5deg) translateY(8px);
+} */
 
-.title-winter {
+/* .title-winter {
     display: inline-block;
     transform: rotate(10deg) translateY(8px);
+} */
+
+:root {
+    --menu-icon-color: white;
 }
 
 
-/* hamburger icon*/
-
-.hamburger {
-    position: absolute;
-    top: 35px;
-    right: 5%;
-
-    width: 36px;
-    height: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    padding: 0;
-    border: none;
-    background: transparent;
-
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 3px;
-
-    background-color: black;
-    border-radius: 2px;
-}
-
-
-/* window sections */
+/* window section */
 
 .window-section {
-    position: relative;
+    position: absolute;
+
+    top: 0;
+    left: 0;
 
     width: 100%;
-   height: 75vh;
+    height: 100%;
 
-    margin-top: -10px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -211,9 +205,7 @@ html {
     border-radius: 48% 48% 7% 7% / 22% 22% 5% 5%;
 }
 
-
 /* window png */
-
 
 .window-drawing {
     position: absolute;
@@ -221,182 +213,191 @@ html {
     top: 0;
     left: 50%;
 
-    width: 80%;
-    height: 120%;
+    width: 110%;
+    height: 100%;
 
     transform: translateX(-50%);
 
     object-fit: fill;
+
     pointer-events: none;
 
-    z-index: 2;
+    z-index: 1;
 }
 
 
 
-/* illustration + clickable links*/
+/* WINDOW SECTION */
+
+.window-section {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* SHARED WINDOW STAGE */
+
+.window-stage {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 110%;
+    height: 100%;
+
+    transform: translateX(-50%);
+}
+
+
+/* ILLUSTRATION CONTAINER */
 
 .window-links {
     position: absolute;
+
     inset: 0;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
     z-index: 3;
+
+    pointer-events: none;
 }
 
 
-/* clickable illustration links */
+/* INDIVIDUAL ILLUSTRATION LINKS */
 
-.owl-link,
-.portrait-link,
-.piano-link {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: black;
-}
-
-
-
-/* three main illustration */
-
-/* shared properties of all three */
-
-.window-art {
+.window-link {
     position: absolute;
+
+    top: 76%;
+
+    width: 19%;
+    height: 35%;
 
     transform: translate(-50%, -50%);
 
+    display: block;
+
+    text-decoration: none;
+    color: black;
+
+    pointer-events: auto;
+}
+
+
+/* POSITION LINKS IN EACH WINDOW */
+
+/* left window */
+.owl-link {
+    left: 21.5%;
+     width: 13%;
+    height: 25%;
+    top: 78%;
+}
+
+/* center window */
+.portrait-link {
+    left: 50%;
+    width: 13%;
+    height: 30%;
+}
+
+/* right window */
+.piano-link {
+    left: 77.3%;
+    width: 13%;
+    height: 37%;
+}
+
+
+/* SHARED ILLUSTRATION STYLING */
+
+.window-art {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
     object-fit: contain;
-    max-width: none;
 
     transition: opacity 0.3s ease;
 }
 
 
-/* owl */
-
-.owl-art {
-    top: 90%;
-    left: 72%;
-
-    width: 50%;
-    height: 35%;
-}
-
-
-/* cw portrait */
-
-.portrait-art {
-    top: 85%;
-    left: 50%;
-
-    width: 50%;
-    height: 35%;
-}
-
-
-/* piano hands */
-
-.piano-art {
-    top: 86%;
-    left: 25%;
-
-    width: 70%;
-    height: 40%;
-}
-
-
-
-
-/* hover text for illustrations*/
-
-/* SHARED STYLING */
+/* HOVER TEXT */
 
 .hover-title {
     position: absolute;
 
+    top: 50%;
+    left: 50%;
+
     transform: translate(-50%, -50%);
 
-    font-family: "DM Sans", Arial, sans-serif;
-    font-weight: 600;
+    font-family: "Courier New", monospace;
+    font-size: 22px;
+    font-weight: 700;
 
     white-space: nowrap;
+
     color: black;
 
     opacity: 0;
-    transition: opacity 0.3s ease;
 
     pointer-events: none;
+
+    transition: opacity 0.3s ease;
 }
 
 
-/* owl hover text position */
+/* HOVER EFFECTS */
 
-.owl-link .hover-title {
-    top: 85%;
-    left: 75%;
-    font-size: 22px;
-}
-
-
-/* cw portrait hover text position*/
-
-.portrait-link .hover-title {
-    top: 85%;
-    left: 50%;
-    font-size: 22px;
-}
-
-
-/* piano hands hover text position */
-
-.piano-link .hover-title {
-    top: 85%;
-    left: 27%;
-    font-size: 22px;
-}
-
-
-/* lower opacity when hover is activiated*/
-
-.window-art:hover {
+.window-link:has(.window-art:hover) .window-art {
     opacity: 0.65;
 }
 
-/* show title when hovered on */
-
-.owl-link:has(.owl-art:hover) .hover-title,
-.portrait-link:has(.portrait-art:hover) .hover-title,
-.piano-link:has(.piano-art:hover) .hover-title {
+.window-link:has(.window-art:hover) .hover-title {
     opacity: 1;
 }
-
-
 
 /* email sign up words */
 
 .scroll-text {
-    margin-top: auto;
-    margin-bottom: 30px;
+    position: absolute;
 
-    font-family: "DM Sans", Arial, sans-serif;
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: "courier new", monospace;
     font-size: 12px;
     font-weight: 500;
 
     text-transform: uppercase;
     letter-spacing: 2px;
 
-    color: black;
+    color: white;
     text-decoration: none;
+
+    z-index: 5;
 }
 
-.scroll-text:hover {
-    opacity: 0.6;
-}
+/* BLACK STRIPE BELOW WINDOWS */
 
+.black-stripe {
+    width: 100%;
+    height: 100px;
+
+    background-color: black;
+}
 
 /* email sign up section */
 
@@ -404,9 +405,10 @@ html {
     width: 100%;
     min-height: 150px;
 
-    padding: 20px 20px;
+    padding: 15px 15px;
 
-    background-color: #787EA2;
+    /* background-color: #A09DBA; */
+    background-color: #78713C;
     color: #FFFFFF;
 
     text-align: center;
@@ -416,14 +418,14 @@ html {
     margin: 0 0 15px;
 
     font-family: "Old England Gothic", serif;
-    font-size: 32px;
+    font-size: 60px;
     font-weight: normal;
 }
 
 .signup-section p {
-    font-family: "DM Sans", Arial, sans-serif;
-    font-size: 14px;
-    margin-bottom: 40px;
+    font-family: "courier new", monospace;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 
@@ -440,7 +442,7 @@ html {
     display: block;
     margin-bottom: 10px;
 
-    font-family: "DM Sans", Arial, sans-serif;
+    font-family: 'courier new', monospace;
     font-size: 12px;
 }
 
@@ -459,7 +461,7 @@ html {
     outline: none;
     background: transparent;
 
-    font-family: "DM Sans", Arial, sans-serif;
+    font-family: 'courier new', monospace;
     font-size: 14px;
 }
 
