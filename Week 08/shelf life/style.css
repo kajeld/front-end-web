@@ -1,0 +1,98 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f7f6f2;
+    color: #292824;
+    font-family: Georgia, serif;
+}
+
+main {
+    min-height: 100vh;
+    padding: 30px 50px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+h1 {
+    text-align: center;
+    font-size: 85px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.collection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 65vh;
+}
+
+.collection button {
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.object {
+    width: 450px;
+    text-align: center;
+}
+
+#display {
+    width: 100%;
+    height: 350px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#object-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#story {
+    display: none;
+    background-color: #e9e6df;
+    padding: 40px;
+    width: 100%;
+}
+
+#story h2 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+#story-text {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#object-name {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+#counter,
+.instruction {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.instruction {
+    color: #77736d;
+}
