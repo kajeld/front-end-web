@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's Your Background Character?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- HOME SCREEN -->
+        <section id="home-screen" class="screen">
+
+            <h1>Who's Your<br>Background Character?</h1>
+
+
+            <button id="start-button" class="main-button">
+                Find your character
+            </button>
+        </section>
+
+
+        <!-- QUESTION 1 -->
+        <section id="question-1" class="screen" hidden>
+            <p class="eyebrow">A LITTLE ABOUT YOU</p>
+
+            <h2>What's your ideal way to spend an afternoon?</h2>
+
+            <div class="answers">
+                <label class="answer">
+                    <input type="radio" name="q1" value="coffee">
+                    <span>Sitting in a coffee shop</span>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="q1" value="headphone">
+                    <span>Wandering around with no destination</span>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="q1" value="bodega">
+                    <span>Staying home</span>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="q1" value="sidequest">
+                    <span>Going somewhere just to look around</span>
+                </label>
+            </div>
+
+            <p class="error-message" id="error-1"></p>
+
+            <button class="main-button next-button" data-next="2">
+                Next
+            </button>
+        </section>
+
+
+        <!-- QUESTION 2 -->
+        <section id="question-2" class="screen" hidden>
+            <p class="eyebrow">A LITTLE ABOUT YOU</p>
+
+            <h2>What's most likely to distract you?</h2>
+
+            <div class="answers">
+                <label class="answer">
+                    <input type="radio" name="q2" value="bodega">
+                    <span>An animal I see on the street</span>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="q2" value="headphone">
+                    <span>A song playing somewhere</span>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="q2" value="pigeon">
+                    <span>Something interesting happening nearby</span>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="q2" value="coffee">
+                    <span>A good-looking dessert</span>
+                </label>
+            </div>
+
+            <p class="error-message" id="error-2"></p>
+
+            <button class="main-button next-button" data-next="3">
+                Next
+            </button>
+        </section>
+
+
+        <!-- QUESTION 3 -->
+        <section id="question-3" class="screen" hidden>
+            <p class="eyebrow">ALMOST THERE</p>
+
+            <h2>What's your current energy level?</h2>
+
+            <div class="answers">
+                <label class="answer">
+                    <input type="radio" name="q3" value="bodega">
+                    <span>Barely functioning</span>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="q3" value="sidequest">
+                    <span>Slowly getting there</span>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="q3" value="pigeon">
+                    <span>Ready for anything</span>
+                </label>
+            </div>
+
+            <p class="error-message" id="error-3"></p>
+
+            <button class="main-button" id="result-button">
+                Reveal my character
+            </button>
+        </section>
+
+
+        <!-- RESULTS SCREEN -->
+        <section id="results-screen" class="screen" hidden>
+            <p class="eyebrow">YOUR OFFICIAL UNOFFICIAL RESULT</p>
+
+            <p id="result-emoji" class="result-emoji"></p>
+
+            <h2 id="result-title"></h2>
+
+            <p id="result-description" class="result-description"></p>
+
+            <button id="reset-button" class="main-button">
+                Find another character
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
